@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eui-YT-tr2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Name View Controller-->
+        <scene sceneID="FYC-CA-aqI">
+            <objects>
+                <viewController id="eui-YT-tr2" customClass="NameViewController" customModule="iOS_MVC_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="82i-rh-kc6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0v-lX-rdx">
+                                <rect key="frame" x="20" y="30" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ljL-za-0Y1" userLabel="First name input">
+                                <rect key="frame" x="20" y="55.5" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onFirstNameChanged:" destination="eui-YT-tr2" eventType="editingChanged" id="981-B0-wlf"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxo-m7-3K8" userLabel="Last name">
+                                <rect key="frame" x="20" y="95.5" width="335" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EN7-1w-JnD" userLabel="Last name input">
+                                <rect key="frame" x="20" y="121" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onLastNameChanged:" destination="eui-YT-tr2" eventType="editingChanged" id="kmI-M6-jA1"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ljL-za-0Y1" firstAttribute="trailing" secondItem="L0v-lX-rdx" secondAttribute="trailing" id="1ti-EH-jGb"/>
+                            <constraint firstAttribute="trailing" secondItem="L0v-lX-rdx" secondAttribute="trailing" constant="20" id="7HV-UT-A9u"/>
+                            <constraint firstItem="EN7-1w-JnD" firstAttribute="top" secondItem="Rxo-m7-3K8" secondAttribute="bottom" constant="5" id="Bx8-5X-fP7"/>
+                            <constraint firstItem="EN7-1w-JnD" firstAttribute="trailing" secondItem="Rxo-m7-3K8" secondAttribute="trailing" id="EJW-hO-KHn"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="EN7-1w-JnD" secondAttribute="bottom" priority="999" constant="5" id="FAr-3f-OIV"/>
+                            <constraint firstItem="L0v-lX-rdx" firstAttribute="leading" secondItem="82i-rh-kc6" secondAttribute="leading" constant="20" id="HBM-f2-pps"/>
+                            <constraint firstAttribute="trailing" secondItem="Rxo-m7-3K8" secondAttribute="trailing" constant="20" id="Jl3-Ph-0Rh"/>
+                            <constraint firstItem="Rxo-m7-3K8" firstAttribute="top" secondItem="ljL-za-0Y1" secondAttribute="bottom" constant="10" id="PSV-sj-ztF"/>
+                            <constraint firstItem="EN7-1w-JnD" firstAttribute="leading" secondItem="Rxo-m7-3K8" secondAttribute="leading" id="Smr-Dk-8yW"/>
+                            <constraint firstItem="Rxo-m7-3K8" firstAttribute="leading" secondItem="82i-rh-kc6" secondAttribute="leading" constant="20" id="Y2J-0u-ewz"/>
+                            <constraint firstItem="ljL-za-0Y1" firstAttribute="leading" secondItem="L0v-lX-rdx" secondAttribute="leading" id="jXU-g0-mVW"/>
+                            <constraint firstItem="ljL-za-0Y1" firstAttribute="top" secondItem="L0v-lX-rdx" secondAttribute="bottom" constant="5" id="jf4-Qo-eUr"/>
+                            <constraint firstItem="L0v-lX-rdx" firstAttribute="top" secondItem="82i-rh-kc6" secondAttribute="topMargin" constant="10" id="kLo-Mu-mrZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lLN-Ez-9xm"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SEd-d2-Ejc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="-43"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8tA-Ou-Bt9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Address View Controller-->
+        <scene sceneID="z7f-oD-g4R">
+            <objects>
+                <viewController id="8tA-Ou-Bt9" customClass="AddressViewController" customModule="iOS_MVC_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y4K-gx-ueP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uki-PJ-u58">
+                                <rect key="frame" x="20" y="30" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZJj-pa-abM" userLabel="Country input">
+                                <rect key="frame" x="20" y="56" width="335" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onCountryChanged:" destination="8tA-Ou-Bt9" eventType="editingChanged" id="6md-BC-aKx"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AP7-zn-8Uy" userLabel="Postal code view">
+                                <rect key="frame" x="20" y="96" width="105" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Postal code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dyq-qi-KlT">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ho4-ek-0Ar" userLabel="Postal code input">
+                                        <rect key="frame" x="0.0" y="26" width="105" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onPostalCodeChanged:" destination="8tA-Ou-Bt9" eventType="editingChanged" id="ZDx-z6-hZJ"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="ho4-ek-0Ar" secondAttribute="bottom" constant="5" id="4Px-eN-YLg"/>
+                                    <constraint firstItem="ho4-ek-0Ar" firstAttribute="top" secondItem="Dyq-qi-KlT" secondAttribute="bottom" constant="5" id="PSq-vT-fTA"/>
+                                    <constraint firstItem="Dyq-qi-KlT" firstAttribute="leading" secondItem="AP7-zn-8Uy" secondAttribute="leading" id="PzB-QB-RLv"/>
+                                    <constraint firstItem="ho4-ek-0Ar" firstAttribute="leading" secondItem="AP7-zn-8Uy" secondAttribute="leading" id="adO-vj-RD7"/>
+                                    <constraint firstAttribute="trailing" secondItem="ho4-ek-0Ar" secondAttribute="trailing" id="biV-wA-IIM"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dyq-qi-KlT" secondAttribute="trailing" constant="15" id="nHD-fs-TxA"/>
+                                    <constraint firstItem="Dyq-qi-KlT" firstAttribute="top" secondItem="AP7-zn-8Uy" secondAttribute="top" id="wdV-bY-oYZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euk-z1-Mgm" userLabel="City view">
+                                <rect key="frame" x="130" y="96" width="225" height="61"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lox-fb-Va7">
+                                        <rect key="frame" x="0.0" y="0.0" width="30.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bCs-5L-FyH" userLabel="City input">
+                                        <rect key="frame" x="0.0" y="26" width="225" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="onCityChanged:" destination="8tA-Ou-Bt9" eventType="editingChanged" id="Gnw-lG-dUf"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="lox-fb-Va7" firstAttribute="top" secondItem="euk-z1-Mgm" secondAttribute="top" id="07i-4b-sAv"/>
+                                    <constraint firstAttribute="trailing" secondItem="bCs-5L-FyH" secondAttribute="trailing" id="2Il-dB-jiO"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lox-fb-Va7" secondAttribute="trailing" id="3A9-mK-Gdk"/>
+                                    <constraint firstAttribute="bottom" secondItem="bCs-5L-FyH" secondAttribute="bottom" constant="5" id="J6T-rS-iaJ"/>
+                                    <constraint firstItem="bCs-5L-FyH" firstAttribute="top" secondItem="lox-fb-Va7" secondAttribute="bottom" constant="5" id="P3M-gy-XFK"/>
+                                    <constraint firstItem="lox-fb-Va7" firstAttribute="leading" secondItem="euk-z1-Mgm" secondAttribute="leading" id="UbD-JK-Znl"/>
+                                    <constraint firstItem="bCs-5L-FyH" firstAttribute="leading" secondItem="euk-z1-Mgm" secondAttribute="leading" id="fyx-3O-hhC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ycb-6y-jaA" firstAttribute="trailing" secondItem="Uki-PJ-u58" secondAttribute="trailing" constant="20" id="D41-Bq-zgV"/>
+                            <constraint firstItem="Uki-PJ-u58" firstAttribute="top" secondItem="ycb-6y-jaA" secondAttribute="top" constant="10" id="EBx-TV-mGH"/>
+                            <constraint firstItem="AP7-zn-8Uy" firstAttribute="leading" secondItem="ycb-6y-jaA" secondAttribute="leading" constant="20" id="LqM-OK-H6j"/>
+                            <constraint firstItem="Uki-PJ-u58" firstAttribute="leading" secondItem="ycb-6y-jaA" secondAttribute="leading" constant="20" id="VqA-30-buC"/>
+                            <constraint firstItem="ZJj-pa-abM" firstAttribute="leading" secondItem="Uki-PJ-u58" secondAttribute="leading" id="Xpk-Op-kCM"/>
+                            <constraint firstItem="AP7-zn-8Uy" firstAttribute="top" secondItem="ZJj-pa-abM" secondAttribute="bottom" constant="10" id="dp0-Jl-RaF"/>
+                            <constraint firstItem="euk-z1-Mgm" firstAttribute="top" secondItem="ZJj-pa-abM" secondAttribute="bottom" constant="10" id="gLp-86-L6R"/>
+                            <constraint firstItem="ZJj-pa-abM" firstAttribute="top" secondItem="Uki-PJ-u58" secondAttribute="bottom" constant="5" id="j5Q-xu-3CR"/>
+                            <constraint firstItem="ycb-6y-jaA" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="euk-z1-Mgm" secondAttribute="bottom" priority="999" constant="5" id="jGs-Uq-MQK"/>
+                            <constraint firstItem="ycb-6y-jaA" firstAttribute="trailing" secondItem="euk-z1-Mgm" secondAttribute="trailing" constant="20" id="pUN-BA-t8b"/>
+                            <constraint firstItem="ZJj-pa-abM" firstAttribute="trailing" secondItem="Uki-PJ-u58" secondAttribute="trailing" id="qao-Zp-ufm"/>
+                            <constraint firstItem="euk-z1-Mgm" firstAttribute="leading" secondItem="AP7-zn-8Uy" secondAttribute="trailing" constant="5" id="vUE-nG-vWT"/>
+                            <constraint firstItem="ycb-6y-jaA" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="AP7-zn-8Uy" secondAttribute="bottom" priority="999" constant="5" id="xPE-B3-nER"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ycb-6y-jaA"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iT7-59-qFT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-92" y="-31"/>
+        </scene>
+    </scenes>
+</document>

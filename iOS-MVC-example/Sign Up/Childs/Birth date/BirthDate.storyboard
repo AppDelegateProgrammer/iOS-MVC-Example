@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Qy-cx-f78">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Birth Date View Controller-->
+        <scene sceneID="pei-aP-h2K">
+            <objects>
+                <viewController id="5Qy-cx-f78" customClass="BirthDateViewController" customModule="iOS_MVC_example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pt9-Qj-EWm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date of birth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0QC-I1-EnY">
+                                <rect key="frame" x="20" y="30" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="r1h-GX-K7J">
+                                <rect key="frame" x="20" y="51" width="335" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="567706798.03509998">
+                                    <!--2018-12-28 16:19:58 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="onBirthDateChanged:" destination="5Qy-cx-f78" eventType="valueChanged" id="DNp-b4-NBa"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="k3Z-bh-gVW" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="r1h-GX-K7J" secondAttribute="bottom" priority="999" constant="5" id="32E-dt-NBo"/>
+                            <constraint firstItem="r1h-GX-K7J" firstAttribute="leading" secondItem="0QC-I1-EnY" secondAttribute="leading" id="8at-uD-RD4"/>
+                            <constraint firstItem="r1h-GX-K7J" firstAttribute="top" secondItem="0QC-I1-EnY" secondAttribute="bottom" id="QAc-AJ-7br"/>
+                            <constraint firstItem="r1h-GX-K7J" firstAttribute="trailing" secondItem="0QC-I1-EnY" secondAttribute="trailing" id="ToG-SM-Hrv"/>
+                            <constraint firstItem="k3Z-bh-gVW" firstAttribute="trailing" secondItem="0QC-I1-EnY" secondAttribute="trailing" constant="20" id="Wqs-KB-JHd"/>
+                            <constraint firstItem="0QC-I1-EnY" firstAttribute="leading" secondItem="k3Z-bh-gVW" secondAttribute="leading" constant="20" id="XVe-rz-9cN"/>
+                            <constraint firstItem="0QC-I1-EnY" firstAttribute="top" secondItem="k3Z-bh-gVW" secondAttribute="top" constant="10" id="s9I-kG-1BI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k3Z-bh-gVW"/>
+                    </view>
+                    <connections>
+                        <outlet property="birthDatePicker" destination="r1h-GX-K7J" id="zgO-Y5-aSf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e65-OS-BRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
